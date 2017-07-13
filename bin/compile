@@ -1,0 +1,24 @@
+#!/bin/bash
+
+steptxt="----->"
+
+start() {
+    echo -n "$steptxt $@... "
+}
+
+finished() {
+    echo "done"
+}
+
+BUILD_DIR=$1
+CACHE_DIR=$2
+ENV_DIR=$3
+
+CRYSTAL_DIR=/tmp/crystal
+PATH="${PATH}:${CRYSTAL_DIR}/bin"
+
+cd $BUILD_DIR
+
+start "Compiling src/sidekiq.cr"
+  crystal build src/sidekiq.cr --release -o sidekiq
+finished
