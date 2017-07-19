@@ -20,5 +20,5 @@ PATH="${PATH}:${CRYSTAL_DIR}/bin"
 cd $BUILD_DIR
 
 start "Compiling src/sidekiq.cr"
-  crystal build src/sidekiq.cr --release -o sidekiq
+  crystal build src/sidekiq.cr --release --no-debug -o sidekiq
 finished
