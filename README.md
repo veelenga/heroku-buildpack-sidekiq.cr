@@ -7,7 +7,7 @@ Depends on [heroku-buildpack-crystal](https://github.com/crystal-lang/heroku-bui
 
 ```
 $ heroku create my-app --buildpack https://github.com/crystal-lang/heroku-buildpack-crystal.git
-$ heroku buildpacks:add https://github.com/veelenga/heroku-buildpack-sidekiq.cr
+$ heroku buildpacks:add https://github.com/crystal-announcements/heroku-buildpack-sidekiq.cr
 ```
 
 ## Prerequirements
